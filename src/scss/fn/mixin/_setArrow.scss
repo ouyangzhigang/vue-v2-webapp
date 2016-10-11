@@ -1,0 +1,41 @@
+
+@mixin setArrowWidthWap($borderWidth) {
+  border-width: $borderWidth $borderWidth 0 0;
+}
+
+@mixin setArrowSizeWap($arrowsize) {
+  height: $arrowsize;
+  width: $arrowsize;
+}
+
+@mixin setArrowWap($direction, $arrowsize, $borderColor, $borderWidth) {
+  display: inline-block;
+  border-color: $borderColor;
+  border-style: solid;
+
+  @if $direction == top {
+    transform: rotate(-45deg);
+    @include setArrowSizeWap($arrowsize);
+    @include setArrowWidthWap($borderWidth);
+  } @else if $direction == right {
+    transform: rotate(45deg);
+    @include setArrowSizeWap($arrowsize);
+    @include setArrowWidthWap($borderWidth);
+    position: relative;
+    top: -2px;
+  } @else if $direction == down {
+    transform: rotate(135deg);
+    @include setArrowSizeWap($arrowsize);
+    @include setArrowWidthWap($borderWidth);
+    position: relative;
+    top: -2px;
+  } @else if $direction == left {
+    transform: rotate(-135deg);
+    @include setArrowSizeWap($arrowsize);
+    @include setArrowWidthWap($borderWidth);
+    position: relative;
+    top: -3px;
+  }
+}
+
+

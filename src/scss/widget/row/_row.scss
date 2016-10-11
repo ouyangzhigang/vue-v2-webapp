@@ -1,0 +1,43 @@
+
+.um-row {
+  padding: $cellGapV $cellGapH;
+  position: relative;
+  display: flex;
+  align-items: center;
+  &::before {
+    @include setTopLine();
+    left: $cellGapH;
+  }
+  &:first-child {
+    &:before {
+      display: none;
+    }
+  }
+}
+
+.um-row-primary {
+  flex: 1;
+}
+
+.um-row-ft {
+  text-align: right;
+  color: $globalTextColor;
+  &.um-with-arrow::after {
+    content: "";
+    @include setArrowWap(right, 6px, #c8c8cd, 2px);
+    top: -1px;
+    margin-left: .3em;
+  }
+}
+
+.um-tap-active {
+  @include setTapColor();
+  &:active {
+    background-color: #ececec;
+  }
+}
+
+.um-title-desc {
+  font-size: 14px;
+  color: #666;
+}

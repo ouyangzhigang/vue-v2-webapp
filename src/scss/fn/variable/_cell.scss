@@ -1,0 +1,11 @@
+$cellBg: #fff;
+$cellBorderColor: #d9d9d9;
+$cellGapV: 10px;
+$cellGapH: 15px;
+$cellInnerGapH: .35em;
+$cellHeight: 44px;
+$cellFontSize: 17px;
+$cellTipsFontSize: 14px;
+$cellLabelWidth: 105px;
+$cellLineHeight: ($cellHeight - 2 * $cellGapV) / $cellFontSize;
+$cellsMarginTop: 20px / $cellFontSize * 1em;
