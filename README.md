@@ -1,4 +1,4 @@
-<h1>insurance-webApp</h1>
+<h1>vue2-webapp</h1>
 
 ## clone
 ```
