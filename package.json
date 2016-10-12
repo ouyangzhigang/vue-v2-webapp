@@ -3,14 +3,16 @@
   "description": "A Vue2.js project",
   "private": true,
   "scripts": {
-    "dev": "NODE_ENV=development node build/dev-server.js",
-    "test": "NODE_ENV=test node build/pack-build.js",
-    "build": "NODE_ENV=production node build/pack-build.js",
+    "dev": "cross-env NODE_ENV=development node build/dev-server.js",
+    "test": "cross-env NODE_ENV=test node build/pack-build.js",
+    "build": "cross-env NODE_ENV=production node build/pack-build.js",
     "pack-test": "bash bash/pack-test.sh",
     "pack-prod": "bash bash/pack-prod.sh",
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
+    "cross-env": "^3.1.2",
+    "env-cmd": "^2.2.0",
     "es6-promise": "^4.0.5",
     "fastclick": "^1.0.6",
     "vue": "^2.0.1",

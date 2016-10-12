@@ -25,6 +25,29 @@
 
 ## build   
 
+```
+  npm run build
+```
+
+## cross-platform-env
+
+```
+  npm install cross-env --save
+```    
+
+## packge.json
+```
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development node build/dev-server.js",
+    "test": "cross-env NODE_ENV=test node build/pack-build.js",
+    "build": "cross-env NODE_ENV=production node build/pack-build.js",
+    "pack-test": "bash bash/pack-test.sh",
+    "pack-prod": "bash bash/pack-prod.sh",
+    "lint": "eslint --ext .js,.vue src"
+  },
+```
+
+
 ## recommend
 * 个人感受
 ```
